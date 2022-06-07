@@ -84,7 +84,6 @@ footer {
     margin-bottom: 1%;
     display: flex;
     align-items: center;
-    animation: color .90s alternate infinite;
 }
 
 .opcionesmenu {
@@ -195,7 +194,6 @@ h2 {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: justify;
-    animation: titulonovedades 50s alternate infinite;
 }
 
 .tablaescalas {
@@ -211,7 +209,6 @@ h2 {
 
 table {
     border: solid white;
-    animation: tablalaboral 2s alternate infinite;
 }
 
 td {
@@ -308,7 +305,7 @@ th {
     display: grid;
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 0.25fr auto 0.5fr;
+    grid-template-rows: 15% 75% 10%;
     grid-template-areas: "encabezadoimpuestos"
         "contenidoimpuestos"
         "footerimpuestos";
@@ -324,10 +321,6 @@ th {
 
 .footerimpuestos {
     grid-area: footerimpuestos;
-    margin: 2%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
 }
 
 .contenidocompletocontacto {
@@ -674,17 +667,13 @@ th {
     .contenido {
         display: grid;
         grid-area: contenido;
-        grid-template-columns: 75% 25%;
-        grid-template-rows: 3fr 1fr;
+        grid-template-columns: 100%;
+        grid-template-rows: 2fr auto 1fr;
         grid-template-areas:
-            "resumen novedad"
+            "novedad"
+            "resumen"
             "enlaces";
     }
-
-    .novedad{
-        display: grid;
-    }
-
 
     .resumen {
         display: grid;
@@ -694,15 +683,11 @@ th {
     }
 
     img {
-        max-width: 100px;
+        max-width: 200px;
     }
 
-    .novedad{
-        grid-area: novedad;
-    }
-
-    .novedades {
-        display: grid;
+    .textonovedades {
+        font-size: larger;
     }
 
     .contenidolaboral {
@@ -1037,123 +1022,4 @@ th {
         font-weight: bold;
         color: aliceblue;
     }
-}
-
-/* Animaciones */
-
-.menua:hover {
-    background-color: #2e043e;
-    font-size: medium;
-}
-
-.opmenu:hover {
-    background-color: rgb(202, 151, 204);
-    padding: 2%;
-    border-radius: 8px;
-}
-
-@keyframes color {
-    25% {
-        color: white;
-    }
-
-    50% {
-        color: #2e043e;
-    }
-
-    75% {
-        color: #dbc3e4;
-    }
-}
-
-@keyframes titulonovedades {
-    25% {
-        color: #692f5b;
-    }
-
-    50% {
-        color: black;
-    }
-
-    75% {
-        color: #dbc3e4;
-    }
-}
-
-.titaside {
-    animation: titaside 1s alternate infinite;
-}
-
-@keyframes titaside {
-    0% {
-        outline: 2px dashed rgb(162, 87, 152);
-        box-shadow: 0 0 0 2px #d4b7bd;
-    }
-
-    25% {
-        outline: 2px dashed #d4b7bd;
-        box-shadow: 0 0 0 2px rgb(162, 87, 152);
-    }
-
-    50% {
-        outline: 2px dashed rgb(162, 87, 152);
-        box-shadow: 0 0 0 2px #d4b7bd;
-    }
-
-    75% {
-        outline: 2px dashed #d4b7bd;
-        box-shadow: 0 0 0 2px rgb(162, 87, 152);
-    }
-}
-
-.tituloenlaces {
-    animation: enlaces 1s alternate infinite;
-}
-
-@keyframes enlaces {
-    25% {
-        color: white;
-    }
-
-    50% {
-        color: black;
-    }
-
-    75% {
-        color: white;
-    }
-}
-
-.animnovedades {
-    animation: animnovedades 2s alternate infinite;
-}
-
-@keyframes animnovedades {
-    25% {
-        background-color: #692f5b;
-    }
-
-    50% {
-        background-color: rgb(53, 57, 95);
-    }
-}
-
-@keyframes tablalaboral {
-    50% {
-        border: solid black;
-    }
-}
-
-.listacuerdos:hover {
-    text-decoration: underline;
-    font-size: small;
-}
-
-.refimpuesto:hover {
-    text-decoration: underline;
-    font-size: small;
-}
-
-.botoncontacto:hover {
-    color: #692f5b;
 }
