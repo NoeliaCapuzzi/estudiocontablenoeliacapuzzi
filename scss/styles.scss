@@ -1,0 +1,1217 @@
+@import 'colores';
+
+
+/* Formato General */
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: $colorfondo;
+    background-size: cover;
+    text-align: center;
+}
+
+img {
+    max-width: 70%;
+    border: 1px solid black;
+}
+
+.mayuscula {
+    text-transform: uppercase;
+}
+
+.nombre {
+    grid-area: nombre;
+    background-image: url(../imagenes/logo.jpg);
+    background-size: 200%;
+    color: #dbc3e4;
+    -webkit-text-stroke: 1px rgb(17, 16, 16);
+    text-align: left;
+    font-size: 200%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    animation: color .90s alternate infinite;
+    @keyframes color {
+        25% {
+            color: white;
+        }
+    
+        50% {
+            color: #2e043e;
+        }
+    
+        75% {
+            color: #dbc3e4;
+        }
+    }
+}
+
+.menu {
+    background-color: $purpura;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1%;
+    font-size: x-small;
+    grid-area: menu;
+
+    .opcionesmenu {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        text-decoration: none;
+        list-style: none;
+        padding: 1%;
+
+        .menua {
+            &:hover {
+                background-color: #2e043e;
+                font-size: medium;
+            }
+        }
+
+        a {
+            color: #deeaf8;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+        }
+    }
+
+}
+
+h2 {
+    background-color: rgb(82, 49, 83);
+    color: $colorsubtitulo;
+    font-size: small;
+}
+
+
+/* Formato Laboral */
+
+
+.contenidocompletolaboral {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.25fr auto 0.5fr;
+    grid-template-areas: "encabezadolaboral"
+        "contenidolaboral1"
+        "footerlaboral";
+
+    .encabezadolaboral {
+        grid-area: encabezadolaboral;
+    }
+
+    .contenidolaboral1 {
+        grid-area: contenidolaboral1;
+
+        .contenidolaboral {
+            .tituloultimosacuerdos {
+                margin-top: 10%;
+            }
+
+            .tablaescalas {
+                text-transform: uppercase;
+                align-content: center;
+                table-layout: fixed;
+                width: 100%;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                padding: 2%;
+                font-size: x-small;
+                border: solid white;
+                animation: tablalaboral 2s alternate infinite;
+
+                thead {
+                    tr {
+                        th {
+                            padding-bottom: 2%;
+                            color: $purpura;
+                            background-color: white;
+                            padding-left: 2%;
+                            padding-right: 2%;
+                        }
+
+                        td {
+                            border-top: solid 1px white;
+                            padding: 2%;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+            }
+
+            .ul {
+                padding-left: 6%;
+                padding-top: 3%;
+                color: white;
+
+                .listacuerdos {
+                    font-size: x-small;
+                    padding-bottom: 2%;
+
+                    &:hover {
+                        text-decoration: underline;
+                        font-size: small;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    .footerlaboral {
+        grid-area: footerlaboral;
+        margin: 2%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+}
+
+
+/* Formato Impuestos */
+
+
+.contenidocompletoimpuestos {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.25fr auto 0.5fr;
+    grid-template-areas: "encabezadoimpuestos"
+        "contenidoimpuestos"
+        "footerimpuestos";
+
+    .encabezadoimpuestos {
+        grid-area: encabezadoimpuestos;
+    }
+
+    .contenidoimpuestos {
+        grid-area: contenidoimpuestos;
+
+        div {
+
+            .listaimpuestos {
+                padding-left: 6%;
+                list-style-type: circle;
+                color: white;
+
+                .refimpuesto {
+                    font-size: xx-small;
+                    padding: 2%;
+                    margin: 1%;
+
+                    &:hover {
+                        text-decoration: underline;
+                        font-size: small;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerimpuestos {
+        grid-area: footerimpuestos;
+        margin: 2%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+
+/* Formato Novedades */
+
+
+.contenidocompletonovedades {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.25fr auto 0.5fr;
+    grid-template-areas: "encabezadonovedades"
+        "contenidonovedades"
+        "footernovedades";
+
+    .encabezadonovedades {
+        grid-area: encabezadonovedades;
+    }
+
+    .contenidonovedades {
+        grid-area: contenidonovedades;
+
+        .contenidonovedade1 {
+            div {
+                .titulonovedades {
+                    font-size: x-small;
+                    text-align: center;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+
+                    @keyframes animnovedades {
+                        25% {
+                            background-color: $purpura;
+                        }
+
+                        50% {
+                            background-color: rgb(53, 57, 95);
+                        }
+                    }
+
+                    @keyframes titulonovedades {
+                        25% {
+                            color: $purpura;
+                        }
+
+                        50% {
+                            color: black;
+                        }
+
+                        75% {
+                            color: #dbc3e4;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .footernovedades {
+        grid-area: footernovedades;
+        margin: 2%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+
+/* Formato Contacto */
+
+
+.contenidocompletocontacto {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% auto 10%;
+    grid-template-areas: "encabezadocontacto"
+        "contenidocontacto"
+        "footercontacto";
+
+    .encabezadocontacto {
+        grid-area: encabezadocontacto;
+    }
+
+    .contenidocontacto {
+        grid-area: contenidocontacto;
+
+        .contactate {
+            text-align: center;
+            font-size: x-small;
+        }
+
+    }
+
+    .footercontacto {
+        grid-area: footercontacto;
+        margin: 2%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+
+}
+
+
+/* Formato Index */
+
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.25fr auto 0.5fr;
+    grid-template-areas: "encabezado"
+        "contenido"
+        "footer";
+
+    .encabezado {
+        grid-area: encabezado;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: "menu"
+            "nombre"
+            "busqueda";
+    }
+
+
+    .busqueda {
+        grid-area: busqueda;
+
+        .lineabusqueda {
+            display: grid;
+            grid-template-columns: 75% 25%;
+            grid-row: 100%;
+            grid-template-areas: "barrabusqueda boton";
+
+            .boton {
+                background-color: rgb(225, 143, 177);
+                text-transform: uppercase;
+                text-decoration: none;
+                border: 2px solid #deeaf8;
+                font-size: xx-small;
+                border-radius: 6px;
+                padding-left: 2%;
+                padding-right: 2%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                height: 20px;
+                text-align: center;
+            }
+
+            .barrabusqueda {
+                padding-left: 2%;
+                padding-right: 2%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                text-align: center;
+                border-radius: 6px;
+                min-width: 60%;
+                height: 20px;
+            }
+
+        }
+
+    }
+
+    .contenido {
+        grid-area: contenido;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: "novedad"
+            "resumen"
+            "enlaces";
+
+        aside {
+            @keyframes titaside {
+                0% {
+                    outline: 2px dashed rgb(162, 87, 152);
+                    box-shadow: 0 0 0 2px #d4b7bd;
+                }
+
+                25% {
+                    outline: 2px dashed #d4b7bd;
+                    box-shadow: 0 0 0 2px rgb(162, 87, 152);
+                }
+
+                50% {
+                    outline: 2px dashed rgb(162, 87, 152);
+                    box-shadow: 0 0 0 2px #d4b7bd;
+                }
+
+                75% {
+                    outline: 2px dashed #d4b7bd;
+                    box-shadow: 0 0 0 2px rgb(162, 87, 152);
+                }
+            }
+        }
+
+        .novedad {
+            grid-area: novedad;
+
+            .novedades {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                grid-template-rows: 1fr 1fr 2fr;
+                margin: 2%;
+                gap: 2%;
+                justify-items: center;
+                align-items: center;
+                font-weight: bold;
+                justify-content: top;
+
+                p {
+                    color: rgb(248, 223, 194);
+                    text-align: justify;
+                    margin: 3px;
+                    padding: 1px;
+                    font-size: small;
+                }
+
+                .textonovedades {
+                    color: black;
+                    font-size: x-small;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    text-align: justify;
+                    animation: titulonovedades 50s alternate infinite;
+                }
+
+            }
+
+        }
+
+        .resumen {
+            grid-area: resumen;
+        }
+
+        .enlaces {
+            grid-area: enlaces;
+            padding-top: 10%;
+
+            @keyframes enlaces {
+                25% {
+                    color: white;
+                }
+
+                50% {
+                    color: black;
+                }
+
+                75% {
+                    color: white;
+                }
+            }
+
+            .tituloenlaces {
+                background-color: rgb(83, 81, 49);
+                color: rgb(248, 223, 194);
+                font-size: x-small;
+            }
+
+            .enlacesinteres {
+                display: flex;
+                padding-top: 1%;
+                justify-content: space-around;
+                text-decoration: underline;
+
+                .aenlaces {
+                    color: blue;
+                    font-size: x-small;
+                }
+
+            }
+
+        }
+
+    }
+
+    footer {
+        grid-area: footer;
+        margin: 2%;
+        font-size: xx-small;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+}
+
+
+/* Media */
+
+
+@media (min-width: 1200px) {
+    .contenido {
+        display: grid;
+        grid-area: contenido;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas:
+            "resumen novedad"
+            "enlaces";
+    }
+
+    .novedad{
+        display: grid;
+    }
+
+
+    .resumen {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 50%);
+        gap: 15px;
+    }
+
+    img {
+        max-width: 100px;
+    }
+
+    .novedad{
+        grid-area: novedad;
+    }
+
+    .novedades {
+        display: grid;
+    }
+
+    .contenidolaboral {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: "titulomejoresconvenios tituloultimosacuerdos"
+            "tablaescalas acuerdoscerrados"
+    }
+
+    .titulomejoresconvenios {
+        grid-area: titulomejoresconvenios;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tablaescalas {
+        grid-area: tablaescalas;
+    }
+
+    .tituloultimosacuerdos {
+        grid-area: tituloultimosacuerdos;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0%;
+    }
+
+    .acuerdoscerrados {
+        grid-area: acuerdoscerrados;
+    }
+
+    .acuerdossalariales {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "acuerdo1"
+            "acuerdo2"
+            "acuerdo3"
+            "acuerdo4"
+            "acuerdo5"
+    }
+
+    .acuerdo1 {
+        grid-area: acuerdo1;
+        list-style: none;
+    }
+
+    .acuerdo2 {
+        grid-area: acuerdo2;
+        list-style: none;
+    }
+
+    .acuerdo3 {
+        grid-area: acuerdo3;
+        list-style: none;
+    }
+
+    .acuerdo4 {
+        grid-area: acuerdo4;
+        list-style: none;
+    }
+
+    .acuerdo5 {
+        grid-area: acuerdo5;
+        list-style: none;
+    }
+
+    .contenidocompletolaboral {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 75% 10%;
+        grid-template-areas: "encabezadolaboral"
+            "contenidolaboral1"
+            "footerlaboral"
+    }
+
+    .encabezadolaboral {
+        grid-area: encabezadolaboral;
+    }
+
+    .contenidolaboral1 {
+        grid-area: contenidolaboral1;
+    }
+
+    .footerlaboral {
+        grid-area: footerlaboral;
+    }
+
+    .contenidonovedades1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "novedad1 novedad1"
+            "novedad2 novedad3"
+            "novedad4 novedad5"
+    }
+
+    .novedad1 {
+        grid-area: novedad1;
+    }
+
+    .novedad2 {
+        grid-area: novedad2;
+    }
+
+    .novedad3 {
+        grid-area: novedad3;
+    }
+
+    .novedad4 {
+        grid-area: novedad4;
+    }
+
+    .novedad5 {
+        grid-area: novedad5;
+    }
+
+    .contenidocompletonovedades {
+        text-align: justify;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 75% 10%;
+        grid-template-areas: "encabezadonovedades"
+            "contenidonovedades"
+            "footernovedades"
+    }
+
+    .encabezadonovedades {
+        grid-area: encabezadonovedades;
+    }
+
+    .contenidonovedades {
+        grid-area: contenidonovedades;
+    }
+
+    .footernovedades {
+        grid-area: footernovedades;
+    }
+
+    .contenidoimpuestos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1.5fr 1fr;
+        grid-template-areas: "iva iva"
+            "ganancias bienespersonales"
+            "monotributo pais";
+        gap: 1%;
+    }
+
+    .iva {
+        grid-area: iva;
+    }
+
+    .ganancias {
+        grid-area: ganancias;
+    }
+
+    .monotributo {
+        grid-area: monotributo;
+    }
+
+    .bienespersonales {
+        grid-area: bienespersonales;
+    }
+
+    .pais {
+        grid-area: pais;
+    }
+
+    .contformulario {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.25fr;
+        grid-template-areas: "formnombre inputnombre"
+            "formapellido inputapellido"
+            "formtelefono inputtelefono"
+            "formcorreo inputcorreo"
+            "formconsulta formconsulta"
+            "botones botones";
+        gap: 2%;
+        padding-left: 2%;
+        padding-right: 5%;
+    }
+
+    .formnombre {
+        grid-area: formnombre;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .inputnombre {
+        grid-area: inputnombre;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .formapellido {
+        grid-area: formapellido;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .inputapellido {
+        grid-area: inputapellido;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .formtelefono {
+        grid-area: formtelefono;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .inputtelefono {
+        grid-area: inputtelefono;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .formcorreo {
+        grid-area: formcorreo;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .inputcorreo {
+        grid-area: inputcorreo;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 30px;
+    }
+
+    .formconsulta {
+        grid-area: formconsulta;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 6px;
+        min-width: 60%;
+        height: 150px;
+    }
+
+    .botones {
+        grid-area: botones;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-template-areas: "inputreset inputsubmit";
+    }
+
+    .inputreset {
+        grid-area: "inputreset";
+        margin: 3%;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .inputsubmit {
+        grid-area: "inputsubmit";
+        margin: 3%;
+        font-weight: bold;
+        color: aliceblue;
+    }
+}
+
+@media (min-width: 600px) {
+    .contenido {
+        display: grid;
+        grid-area: contenido;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "resumen novedad"
+            "enlaces enlaces";
+    }
+
+    .novedad {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px auto;
+        grid-template-areas: "titnovedad"
+            "novedades";
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .titnovedad {
+        padding: 2%;
+    }
+
+    .titaside {
+        padding: 2%;
+    }
+
+    .resumen {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "noticia1"
+            "noticia2";
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .noticia1 {
+        grid-area: noticia1;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px auto;
+        grid-template-areas: "titaside1"
+            "paside1";
+    }
+
+    .titaside1 {
+        grid-area: titaside1;
+    }
+
+    .paside1 {
+        grid-area: paside1;
+    }
+
+    .noticia2 {
+        grid-area: noticia2;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px auto;
+        grid-template-areas: "titaside2"
+            "paside2";
+    }
+
+    .titaside2 {
+        grid-area: titaside2;
+    }
+
+    .paside2 {
+        grid-area: paside2;
+    }
+
+    .acuerdossalariales {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25%;
+        grid-template-areas: "acuerdo1 acuerdo1"
+            "acuerdo2 acuerdo3"
+            "acuerdo4 acuerdo5";
+        gap: 5px
+    }
+
+    .acuerdo1 {
+        grid-area: acuerdo1;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .acuerdo2 {
+        grid-area: acuerdo2;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .acuerdo3 {
+        grid-area: acuerdo3;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .acuerdo4 {
+        grid-area: acuerdo4;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .acuerdo5 {
+        grid-area: acuerdo5;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* Varios */
+
+.titulotablaescalas {
+    font-weight: bold;
+    color: #deeaf8;
+}
+
+.titulospaginas {
+    font-size: x-small;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.datos {
+    font-weight: bold;
+    padding: 3%;
+    font-size: smaller;
+}
+
+.formatocontacto {
+    font-size: x-small;
+    text-align: center;
+}
+
+.contformulario {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.25fr;
+    grid-template-areas: "formnombre"
+        "inputnombre"
+        "formapellido"
+        "inputapellido"
+        "formtelefono"
+        "inputtelefono"
+        "formcorreo"
+        "inputcorreo"
+        "formconsulta"
+        "formconsulta"
+        "botones";
+    gap: 1%;
+    padding-left: 2%;
+    padding-right: 5%;
+}
+
+.formnombre {
+    grid-area: formnombre;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.inputnombre {
+    grid-area: inputnombre;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.formapellido {
+    grid-area: formapellido;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.inputapellido {
+    grid-area: inputapellido;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.formtelefono {
+    grid-area: formtelefono;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.inputtelefono {
+    grid-area: inputtelefono;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.formcorreo {
+    grid-area: formcorreo;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.inputcorreo {
+    grid-area: inputcorreo;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 30px;
+}
+
+.formconsulta {
+    grid-area: formconsulta;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 60%;
+    height: 150px;
+}
+
+.botones {
+    grid-area: botones;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "inputreset inputsubmit";
+}
+
+.inputreset {
+    grid-area: "inputreset";
+    margin: 3%;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.inputsubmit {
+    grid-area: "inputsubmit";
+    margin: 3%;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.opmenu:hover {
+    background-color: rgb(202, 151, 204);
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.titaside {
+    animation: titaside 1s alternate infinite;
+}
+
+.tituloenlaces {
+    animation: enlaces 1s alternate infinite;
+}
+
+.animnovedades {
+    animation: animnovedades 2s alternate infinite;
+}
+
+@keyframes tablalaboral {
+    50% {
+        border: solid black;
+    }
+}
+
+.botoncontacto:hover {
+    color: #692f5b;
+}
