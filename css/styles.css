@@ -44,14 +44,16 @@ img {
   text-decoration: none;
   margin-bottom: 1%;
   font-size: x-small;
-  grid-area: menu; }
+  grid-area: menu;
+  background-color: #2e043e; }
   .menu .opcionesmenu {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     text-decoration: none;
     list-style: none;
-    padding: 1%; }
+    padding: 1%;
+    background-color: #2e043e; }
     .menu .opcionesmenu .menua:hover {
       background-color: #2e043e;
       font-size: medium; }
@@ -818,3 +820,12 @@ h2 {
 
 .botoncontacto:hover {
   color: #692f5b; }
+
+.btn--buscar {
+  background-color: grey; }
+
+.btn--enviar {
+  background-color: #692f5b; }
+
+.btn--reset {
+  background-color: #692f5b; }

@@ -1,4 +1,8 @@
 @import 'colores';
+@mixin padding($paddingleft, $paddingright){
+    padding-left: $paddingleft;
+    padding-right: $paddingright;    
+}
 
 
 /* Formato General */
@@ -60,6 +64,7 @@ img {
     margin-bottom: 1%;
     font-size: x-small;
     grid-area: menu;
+    background-color: $color-menu;
 
     .opcionesmenu {
         display: flex;
@@ -68,6 +73,7 @@ img {
         text-decoration: none;
         list-style: none;
         padding: 1%;
+background-color: $color-menu;
 
         .menua {
             &:hover {
@@ -135,8 +141,7 @@ h2 {
                             padding-bottom: 2%;
                             color: $purpura;
                             background-color: white;
-                            padding-left: 2%;
-                            padding-right: 2%;
+                            @include padding(2%, 2%);
                         }
 
                         td {
@@ -321,7 +326,6 @@ h2 {
         }
 
     }
-
     .footercontacto {
         grid-area: footercontacto;
         margin: 2%;
@@ -330,7 +334,6 @@ h2 {
         justify-content: center;
 
     }
-
 }
 
 
@@ -373,8 +376,7 @@ h2 {
                 border: 2px solid #deeaf8;
                 font-size: xx-small;
                 border-radius: 6px;
-                padding-left: 2%;
-                padding-right: 2%;
+                @include padding(2%, 2%);
                 padding-top: 1%;
                 padding-bottom: 1%;
                 height: 20px;
@@ -382,8 +384,7 @@ h2 {
             }
 
             .barrabusqueda {
-                padding-left: 2%;
-                padding-right: 2%;
+                @include padding(2%, 2%);
                 padding-top: 1%;
                 padding-bottom: 1%;
                 text-align: center;
@@ -742,8 +743,7 @@ h2 {
             "formconsulta formconsulta"
             "botones botones";
         gap: 2%;
-        padding-left: 2%;
-        padding-right: 5%;
+        @include padding(2%, 5%);
     }
 
     .formnombre {
@@ -752,8 +752,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -764,8 +763,7 @@ h2 {
 
     .inputnombre {
         grid-area: inputnombre;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -780,8 +778,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -792,8 +789,7 @@ h2 {
 
     .inputapellido {
         grid-area: inputapellido;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -808,8 +804,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -820,8 +815,7 @@ h2 {
 
     .inputtelefono {
         grid-area: inputtelefono;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -836,8 +830,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -848,8 +841,7 @@ h2 {
 
     .inputcorreo {
         grid-area: inputcorreo;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -860,8 +852,7 @@ h2 {
 
     .formconsulta {
         grid-area: formconsulta;
-        padding-left: 2%;
-        padding-right: 2%;
+        @include padding(2%, 2%);
         padding-top: 1%;
         padding-bottom: 1%;
         text-align: center;
@@ -1064,8 +1055,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1074,8 +1064,7 @@ h2 {
 
 .inputnombre {
     grid-area: inputnombre;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1088,8 +1077,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1098,8 +1086,7 @@ h2 {
 
 .inputapellido {
     grid-area: inputapellido;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1112,8 +1099,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1122,8 +1108,7 @@ h2 {
 
 .inputtelefono {
     grid-area: inputtelefono;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1136,8 +1121,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1146,8 +1130,7 @@ h2 {
 
 .inputcorreo {
     grid-area: inputcorreo;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     padding-top: 1%;
     padding-bottom: 1%;
     text-align: center;
@@ -1158,8 +1141,7 @@ h2 {
 
 .formconsulta {
     grid-area: formconsulta;
-    padding-left: 2%;
-    padding-right: 2%;
+    @include padding(2%, 2%);
     text-align: center;
     border-radius: 6px;
     min-width: 60%;
@@ -1214,4 +1196,10 @@ h2 {
 
 .botoncontacto:hover {
     color: #692f5b;
+}
+
+@each $btn, $color in $colores-botones {
+    .btn--#{$btn}{
+        background-color: $color;
+    }
 }
